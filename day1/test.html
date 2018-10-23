@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* span{
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+        line-height: 200px;
+        text-align: center;
+        border: solid 5px #000;
+        border-radius: 200px;
+        background: -webkit-linear-gradient(left top,red,blue,green);
+        margin-top:10px;
+        box-shadow: 5px 5px 5px 5px #ccc; 
+        }
+    .cc{
+        width: 400px;
+        height: 200px;
+        border: #000 20px solid;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 200px;
+
+    } */
+    .box{
+        /* 标准的盒子模型  padding和border从内往外撑 */
+        /* ie盒子模型 padding 和  border 都是由外向内往里撑 */
+        width: 100px;
+        height: 100px;
+        border: solid 10px #ccc;
+        padding: 20px;
+        /* box-sizing: border-box; 针对ie*/
+    }
+    #btn{
+        width: 50px;
+        height: 50px;
+    }
+    </style>
+    <!-- 
+常见的行内元素：span,a ,em,i,strong
+常见的块状元素
+div h系列,ul(ol),
+header,
+main,
+footer 
+标签语义化:对应的标签干对应的事
+css 盒子模型 内容  内填充 边框
+权重问题 
+标签选择器 1；
+id选择器 100；
+类名选择器 10；
+
+ -->
+</head>
+<body>
+    <!-- <span>石家庄职业技术学院</span>
+    <img src="" alt="">
+    <span>1212121</span>
+    <div class="cc" >
+        前端培优班
+    </div> -->
+    <!-- <div>enenen</div> -->
+    <div class="box"></div>
+    <button type="button" id="btn" value="1">1</button>
+    <button type="button" id="btn">1</button>
+    <button type="button" id="btn">1</button>
+    <button type="button" id="btn">1</button>
+
+
+<script type="text/javascript">
+//     $(document).ready(function(){
+//     $('#btn').click(function(){
+     
+//     });
+// }
+for(var i = 0; i < btn.length ; i++){
+oBtns[i].onclick = function () {
+alert(this.innerHTML);
+}
+}
+
+    // var x=y=z = [1,2,3,4,5];//数组属于引用数据类型
+    // console.log(x==y)
+    // z[4]=5;//有就是修改，没有就是添加
+    // console.log(z);
+    // z=[10,20,30]
+   
+    // console.log(x,y,z);
+
+    //  var str='a12.23q';
+    //  console.log(Number(str));
+     //空字符串或者空格  用Number得到的结构都是0
+    //  console.log(parseInt(str));//NAN ='not a number' 只要第一个字符是非数字 那么得到的结果就是NaN
+     //NaN   若第一个是数字，则往后查找   查到数字时 停止查找
+    // function sum(a,b,c){
+                // var a=1, b=2, c=3;
+                // mysum= Number(1);
+                // console.log(mysum);
+                // console.log(arguments[1]); 
+    // var num=0; 
+    //    for(var i = 0; i<arguments.length;i++){
+    //     console.log(arguments[i]);
+       //num = num+arguments[i]
+        // num += arguments[i];
+      //arguments 实参集合
+    //    }
+       //当for循环不成立时，才会跳出for循环
+        // return num;
+    // }
+    // var s=sum(1,2,3);
+    // console.log(s);
+        // var n=4%5;
+        // if(n>=2 && n<=3){
+        //     console.log(2);
+        // }
+        // if(n>=2 || n<=3){
+        //     console.log('any number');
+        // }
+    //布尔类型中,有5个是false  其余全是true; boolean()
+    //0 NaN '' null undefined   false
+   // var a= 1 || 2 ;
+    // 前边成立给前面，前面不成立给后面。
+    //var b= 1 && 2 
+    // 前面成立给后面，前边不成立给前边。
+   // console.log(a,b);
+    //==相对比较   会把两边转化为同一类型在
+    //===绝对比较 直接判断类型
+     //console.log('0'== 0);//会把两边数据转换成数字在进行比较
+   // console.log([]==false);// true 先把引用 to string数据类型转化成字符串，再把字符串转化成数字，再进行比较
+   // console.log(![]==false);//true  取反先变为Boolean
+    //!!1 ==Boolean(1)
+    /* 
+    JS中数据类型分为两大类
+    基本数据类型（值类型） string , number, boolean , null , undefined
+    引用数据类型  [] {} function data math 正则
+    基本数据类型操作的都是一个值，引用数据类型操作的都是一个地址  */
+   // var name='珠峰', age= 9
+   // console.log('我的名字是'+name+'  我的年龄是'+age);
+   // es6  字符串模板
+  //  var str = `我的名字是${name} 我的年龄是${age}` 
+   // console.log(str);
+   // var str2='123\'456'; // 若想用单引号包含引号，我们需要用\字符串中的单引号转义
+      //  var str = "123 石家庄"
+        //str.replace(/123/, "美丽的");
+       // console.log(str.replace(/123/, "美丽的"));
+      //  NaN == NaN // false
+       // null == undefined //true
+       // null === undefined //false
+      //  typeof() // 查看括号内的数值类型
+
+       // isNaN(1/'a')//判断参数是否是NaN  若是则返回true，否则则返回false；
+       // typeof typeof typeof 1 //string
+        
+      //  var obj ={ name:'zz',age:9};
+       // console.log(obj.name);
+        // var obj =[1,2,3];
+        // obj[1];
+        // console.log(obj);  
+        // switch ('1') {
+        //     case 0:
+        //         console.log(0);
+        //         break;
+        //         case 1:
+        //         console.log(1);
+        //         break;
+        //         case 2:
+        //         console.log('other');
+        //         break;
+        //     default:
+        //         break;
+        // } 
+
+        // for(var i=0;i<10;i++){
+        //     switch (i%4) {
+        //         case 1:   
+        //         case 3:
+        //             i+=1;
+        //             break;
+        //         case 0:
+        //         case 2:
+        //             i+=2;
+        //             break;
+        //         default: i+=4;
+                    
+        //     }
+        // }
+        // console.log(i);
+        //i=0; 0<10; -->i+=2 -->2 -->3
+        //i=3; 3<10; -->i+=1 -->5 -->6
+        //i=6; 6<10; -->i+=2 -->8 -->9
+        //i=9; 9<10; -->i+=1 -->10 --> 11
+        //获取属性的两种方式
+        //一是打点;另一种是[],中括号的这种方式一般适用于属性值是通过变量获取的情况
+        /*Number();
+        parseInt
+        parseFloat
+        */
+        
+</script>
+</body>
+</html>
+<script>
+    var ary=[1,2,3,4];
+    ary[4]=5;
+    ary.push(5,3,4,5,5);//给数组末尾添加项
+    console.log(ary);
+    function fu(){
+      return;//return有两个作用，一个打断函数的执行，另一个是，返回结果给外界。不写return时默认返回underfined
+
+    }
+   
+    var item=ary.pop()//删除数组的最后一项
+    var n=ary.unshift(100,9999,9090);
+      ary.unshift()//删除数组首位
+
+      ary=[65,34,688,456,8908]
+      ary.sort(function(a,b){
+        return a-b;
+        //返回值a-b  就是一个升序
+        //返回b-a   就是一个降序
+     reverse//数组的反转，返回结果和原数组地址一样
+})
+
+     //forEach
+     ary.forEach(function(item,index){
+
+       //item 是循环的数组的每一项
+       //index 是循环的每一项的索引
+     })
+     ary.filter(function(item,index){
+
+     })
+
+
+     console.log(qqq);
+     var qqq=123  //可以多次声明
+     let aaa=123  //let只能声明一次
+</script>
